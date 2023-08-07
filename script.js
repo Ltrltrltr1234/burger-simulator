@@ -1,5 +1,5 @@
 "use strict";
-import "node_modules/break_eternity.js/dist/break_eternity.js";
+import "./node_modules/break_eternity.js/dist/break_eternity.js";
 
 function nd(numba) {
     if (numba != NaN) {
