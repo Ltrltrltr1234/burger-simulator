@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Burger simulator</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h1>burger simulator</h1>
+    <h4>v2.0.0: The Non-euclidean Update - <a href="./changelog.txt">Changelog</a></h4>
+        <div id="gamebeat">
+            <h2>Nice you beat the game</h2>
+            <h3 id="beattime"></h3>
+            <button onclick="reset()" class="reset">Reset the game</button>
+        </div>
+        <div id="burgers"></div>
+        <div id="burgerpersec"></div>
+        <div id="hypercubes"></div>
+
+        <div id="app1">
+            <div class="nav">
+                <button class="navtab" @click="currenttab = 'burgers'">Burgers</button>
+                <button class="navtab" @click="currenttab = 'transcendence'" id="transcendencetab">Transcendence</button>
+            </div>
+            <div class="burgersection tabsection" v-show="currenttab == 'burgers'">
+                <div class="burgerupgrades">
+                    <div
+                    is="normalupgrade"
+                    v-for="upgrade in upgrades"
+                    v-bind:key="upgrade.id"
+                    v-bind:upgradeid="upgrade.id"
+                    v-bind:name="upgrade.name"
+                    v-bind:desc="upgrade.desc"
+                    ></div>
+                </div>
+                <div class="burgerautobuyers">
+                    <div
+                    is="autobuyer"
+                    v-for="upgrade in upgrades"
+                    v-bind:key="upgrade.id"
+                    v-bind:autobuyerid="upgrade.id"
+                    v-bind:displayid="upgrade.displayid"
+                    v-bind:upg="upgrade.name"
+                    ></div>
+                </div>
+            </div>
+            <div class="transcendencesection tabsection" v-show="currenttab == 'transcendence'">
+                <button id="transcend" onclick="transcend()"><h1>TRANSCEND</h1>Transcending will obliterate all made progress in exchange for new content and more grindy grindy grinding. You can now also go beyond 10^^1e308 burgers even though there is currently no incentive to do so.<div id="transcendgain"></div></button>
+                <div id="transcendinfo">
+                    <div id="burgercap"></div>
+                    <div id="omegaburgers"></div>
+                    <div id="omegaburgerpersec"></div>
+                </div>
+                <h2>Transcendent Upgrades</h2>
+                <div id="transcendupgrades">
+                    <div
+                    is="transcendupgrade"
+                    v-for="upgrade in transcendupgrades"
+                    v-bind:key="upgrade.id"
+                    v-bind:upgradeid="upgrade.id"
+                    v-bind:name="upgrade.name"
+                    v-bind:desc="upgrade.desc"
+                    ></div>
+                </div>
+                <div id="oblivionsection">
+                    <div id="oblivionburgers">
+                        <b>You have <span id="oblivionburgercount"></span> <span class=oblivionburger><span class=oblivionburgerlogo>🍔</span><span class=oblivionburgersymbol>Θ</span></span>, tetrating hypercube gain by <span id="oblivioneffect"></span></b>
+                    </div>
+                    <h2>Oblivion Upgrades</h2>
+                    <button id="respec" onclick="respec()"><b>Refund Oblivion Upgrades back into base amount of Oblivion-tainted burgers</b></button>
+                    <div id="oblivionupgrades">
+                        <div class=trupgradewrapper><button id="trupgrade7" class="trupgrade oblivionupgrade" onclick="buytr(7)"><h3>Abyss-tainted coalescence <span id="trbought7"></span></h3><p>Scorch a burger with the sanguine flames at the bellows of oblivion, giving it a unique signature taste. Cost for this upgrade scales off total Oblivion-tainted burgers bought, NOT current Oblivion-tainted burger amount</p><p>Cost: e^<span id="trcost7"></span> 🍔</p><div id="trupgrade7current"></div></button><button id="trupgradebuymax7" class="trupgradebuymax" onclick="buytrmax(7)">Buy max</button></div>
+                        <div
+                        is="oblivionupgrade"
+                        v-for="upgrade in oblivionupgrades"
+                        v-bind:key="upgrade.id"
+                        v-bind:upgradeid="upgrade.id"
+                        v-bind:name="upgrade.name"
+                        v-bind:desc="upgrade.desc"
+                        ></div>
+                    </div>
+                </div>
+                <div id="transcendautobuyers">
+                    <div id="trupgradeautobuyer1">Transcendent Auto upgrader 1 ACTIVE: Upgrades Hyperplanar homeomorphy every tick</div>
+                    <div id="trupgradeautobuyer2">Transcendent Auto upgrader 2 ACTIVE: Upgrades Extradimensional capitalism every tick</div>
+                    <div id="trupgradeautobuyer3">Transcendent Auto upgrader 3 ACTIVE: Upgrades Hyperoperation grindset every tick</div>
+                    <div id="trupgradeautobuyer4">Transcendent Auto upgrader 4 ACTIVE: Upgrades Metaphysical construct every tick</div>
+                    <div id="trupgradeautobuyer5">Transcendent Auto upgrader 5 ACTIVE: Upgrades Abyss-tainted coalescence every tick</div>
+                </div>
+            </div>
+        </div>
+</body>
+<script src="script.js" type="module"></script>
+<script src="app.js" type="module"></script>
+<script src="https://cdn.jsdelivr.net/npm/break_eternity.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script type="module">
+    import * as scrip from "./script.js";
+    window.lsgid = scrip.lsgid;
+    window.lsgi = scrip.lsgi;
+    window.burgerpersecond = scrip.burgerpersecond;
+    window.expnumber = scrip.expnumber;
+    window.buymax = scrip.buymax;
+    window.buytr = scrip.buytr;
+    window.buytrmax = scrip.buytrmax;
+    window.transcend = scrip.transcend;
+    window.respec = scrip.respec;
+    window.reset = scrip.reset;
+</script>
+</html>

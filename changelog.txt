@@ -1,0 +1,23 @@
+v2.0.0: The "Non-euclidean Update"
+-Post-Infinity content: Transcendence and its six Upgrades based on Hypercubes, Oblivion Upgrades, generation of Omega-burgers and Oblivion-tainted Burgers
+-New win condition: 10^^(10^^(~10^308)) burgers
+-Upgrades now actually cost burgers instead of just requiring them when burger count below 1e1000 burgers
+-Rewrote DOM elements in Vue.js
+-Upgrades borders now change colours when available
+-Fixed more Notation
+-Changed font from Consolas to JetBrains Mono (what my ide uses👍)
+-Added this changelog
+
+v1.1.1 - v1.2.0: "Burg-fixes"
+-Large Number Notation fixes
+-Slowed down pacing of game by ~10 seconds
+-Infinity display
+
+v1.1.0: "Hyperbolic Apeirogon"
+-Added 2 new Upgrades (Larger Burger, Multiversal Apeirogon) & rewired game pacing and progression
+-Added Speedrun timer
+
+v1.0.0: "Burger Simulator"
+-Initial release
+-5 Upgrades & respective Auto-upgraders
+-Win condition: 10^^(~10^308) burgers

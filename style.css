@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Cousine&family=JetBrains+Mono:wght@300&display=swap');
+
+@keyframes oblivionburgereffect {
+    0% {
+        text-shadow: 0px 0px 3px rgb(255, 0, 64);
+    }
+    50% {
+        text-shadow: 0px 0px 10px rgb(255, 0, 64);
+    }
+    100% {
+        text-shadow: 0px 0px 3px rgb(255, 0, 64);
+    }
+}
+
+* {
+    font-family: 'JetBrains Mono';
+    text-align: center;
+    font-size: calc(2vmin + 1.5px);
+}
+
+h1{
+    margin: 20px;
+    font-size: calc(5vmin + 3px);
+}
+
+h2{
+    margin: 10px;
+    font-size: calc(3vmin + 2.5px);
+}
+
+p{
+    margin: 5px;
+}
+
+.burgerupgrades {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    margin: 1vmin 0;
+    row-gap: 1vmin;
+    column-gap: 1vmin;
+    padding: 1vmin;
+}
+
+.upgrade {
+    width: 100%;
+    display: inline-grid;
+    background-color: white;
+    border: 1vmin solid #7e7c9b;
+    border-radius: 10px;
+    padding: 2vmin;
+    overflow: auto;
+    transition: ease-in-out 100ms;
+}
+
+.navtab {
+    margin: 0.5vmin;
+    margin-top: 1.5vmin;
+    background-color: white;
+    border: 0.75vmin solid #7e7c9b;
+    border-radius: 10px;
+    padding: 0.5vmin;
+    width: 25%;
+    min-width: 150px;
+    max-width: 300px;
+}
+
+.reset {
+    margin: 1vmin;
+    background-color: white;
+    border: 0.75vmin solid #7e7c9b;
+    border-radius: 10px;
+    padding: 1vmin;
+    width: 25%;
+    min-width: 200px;
+}
+.burgersection {
+    overflow: auto;
+}
+
+#gamebeat {
+    margin: 4vmin;
+}
+
+.infinity{
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: rgb(137, 162, 255);
+    text-shadow: 0px 0px 5px rgb(137, 162, 255);
+}
+
+#transcend{
+    margin: auto;
+    background-color: white;
+    border: 1vmin solid #7e7c9b;
+    border-radius: 2vmin;
+    padding: 2vmin;
+    overflow: auto;
+    transition: ease-in-out 100ms;
+}
+
+#transcendupgrades {
+    margin: 10px;
+}
+
+#burgercap {
+    margin: 10px;
+}
+
+#omegaburgerpersec{
+    margin-bottom: 10px;
+}
+
+#transcendupgrades, #oblivionupgrades {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    margin: 1.5vmin 0;
+    overflow: auto;
+    row-gap: 1vmin;
+    column-gap: 1vmin;
+    padding: 1vmin;
+}
+
+.trupgradewrapper {
+    display: inline-grid;
+    width: 100%;
+}
+
+.trupgrade {
+    background-color: white;
+    border: 1vmin solid #7e7c9b;
+    border-radius: 2vmin;
+    padding: 2vmin;
+    overflow: auto;
+    transition: ease-in-out 100ms;
+}
+.trupgradebuymax {
+    background-color: white;
+    border: 0.75vmin solid #7e7c9b;
+    border-radius: 10px;
+    padding: 0.5vmin;
+    margin: 1vmin 0;
+}
+.omegaburger {
+    display: inline;
+    position: relative;
+}
+.omegaburgerlogo {
+    filter: invert(1) brightness(0.6);
+    font-size: 2em;
+}
+.omegaburgersymbol {
+    font-weight: bold;
+    font-size: 1.5em;
+    position: absolute;
+    top: -40%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: aqua;
+}
+
+#oblivionburgers {
+    color: darkred;
+}
+
+.oblivionburger {
+    position: relative;
+}
+.oblivionburgerlogo {
+    filter: invert(1) sepia(1) hue-rotate(-60deg) brightness(0.4) saturate(4);
+    font-size: 2.7em;
+    animation-name: oblivionburgereffect;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.oblivionburgersymbol {
+    font-weight: bold;
+    font-size: 2em;
+    position: absolute;
+    top: -80%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgb(255, 0, 64);
+}
+
+#oblivioneffect {
+    color: rgb(255, 0, 64);
+    font-size: 2em;
+    animation-name: oblivionburgereffect;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+#transcendautobuyers {
+    margin: 3% 0;
+}
+
+#respec {
+    background-color: white;
+    border: 0.75vmin solid #7e7c9b;
+    border-radius: 10px;
+    padding: 0.5vmin 3vmin;
+    margin: 1vmin 0;
+}
+
+.redinfinity {
+    color: rgb(255, 0, 64);
+    animation-name: oblivionburgereffect;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
